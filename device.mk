@@ -34,8 +34,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-	 $(DEVICE_PATH)/overlay \
-	 $(DEVICE_PATH)/overlay-evo
+	 $(DEVICE_PATH)/overlay
 
 # APEX
 ENABLE_APEX := true
@@ -100,7 +99,7 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, vendor/xiaomi/lavender/lavender-vendor.mk)
 
 # AOSP DEVICE
-PRODUCT_NAME := evolution_lavender
+PRODUCT_NAME := revengeos_lavender
 PRODUCT_DEVICE := lavender
 PRODUCT_MODEL := Redmi Note 7 (AOSP)
 PRODUCT_BRAND := Xiaomi
