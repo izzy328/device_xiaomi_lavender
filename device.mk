@@ -39,6 +39,11 @@ DEVICE_PACKAGE_OVERLAYS += \
 # APEX
 ENABLE_APEX := true
 
+# APN
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/etc/apns-conf.xml:system/etc/apns-conf.xml
+
+
 # Audio
 PRODUCT_COPY_FILES += \
 	$(DEVICE_PATH)/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
@@ -93,6 +98,10 @@ PRODUCT_COPY_FILES += \
 	$(DEVICE_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
 	$(DEVICE_PATH)/sensors/elliptic.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/elliptic.conf
 
+# AuthSecret
+PRODUCT_PACKAGES += \
+    android.hardware.authsecret@1.0-service
+
 # Vibrator
 PRODUCT_PACKAGES += \
 	android.hardware.vibrator@1.0-impl \
@@ -102,7 +111,7 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, vendor/xiaomi/lavender/lavender-vendor.mk)
 
 # AOSP DEVICE
-PRODUCT_NAME := revengeos_lavender
+PRODUCT_NAME := aosp_lavender
 PRODUCT_DEVICE := lavender
 PRODUCT_MODEL := Redmi Note 7 (AOSP)
 PRODUCT_BRAND := Xiaomi
