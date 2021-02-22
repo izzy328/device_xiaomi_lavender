@@ -33,6 +33,7 @@ $(call inherit-product, device/xiaomi/lavender/device.mk)
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 SELINUX_IGNORE_NEVERALLOWS := true
+HYCON_BUILD_TYPE := OFFICIAL
 
 # Build Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
